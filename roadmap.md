@@ -1,17 +1,15 @@
 # Fish Session Tracker – Development Roadmap
 
-Based on design_doc.md
+## Phase 0 — Project Setup (Foundation)
 
----
+### Goals
 
-# Phase 0 — Project Setup (Foundation)
-
-## Goals
 Establish structure, tooling, and database baseline.
 
-## Tasks
+### Tasks
 
 ### Repository & Tooling
+
 - Initialize Git repository
 - Setup Node.js project (`npm init`)
 - Install dependencies:
@@ -23,33 +21,38 @@ Establish structure, tooling, and database baseline.
 - Setup folder structure from design document
 
 ### Environment Setup
+
 - Create `.env`
 - Configure SQLite database
 - Setup Prisma
 
-## Deliverable
+### Deliverable
+
 - App runs with empty Express server
 - Prisma connected to SQLite
 - Folder structure in place
 
 ---
 
-# Phase 1 — Database & Schema Design
+## Phase 1 — Database & Schema Design
 
-## Goals
+### Goals
+
 Implement entities exactly as defined in design document.
 
-## Tasks
+### Tasks
 
-### 1. Prisma Schema
+#### 1. Prisma Schema
 
 Implement:
+
 - User
 - FishingSession
 - Catch
 - Species
 
 Add:
+
 - Foreign key constraints
 - Indexes:
   - `FishingSession.date`
@@ -57,15 +60,18 @@ Add:
   - `Catch.species_id`
 - Soft delete flag on FishingSession (`is_deleted` boolean)
 
-### 2. Seed Data
+#### 2. Seed Data
+
 - Create predefined species list
 - Add seed script
 
-### 3. Migrations
+#### 3. Migrations
+
 - Run first migration
 - Validate schema with test inserts
 
-## Deliverable
+### Deliverable
+
 - Fully functional relational schema
 - Seeded species list
 

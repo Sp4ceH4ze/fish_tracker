@@ -3,16 +3,19 @@
 ## 1. Entities and Relationships
 
 ### User
+
 - id
 - name
 
 ### FishingSession
+
 - id
 - date
 - location_name
 - notes (optional)
 
 ### Catch
+
 - id
 - session_id
 - species_id
@@ -22,6 +25,7 @@
 - time_caught (optional)
 
 ### Species
+
 - id
 - name
 - is_active (for hiding species later)
@@ -42,6 +46,7 @@
 - Quick-add workflow (add multiple catches fast)
 
 Validation Rules:
+
 - Length must be positive
 - Weight must be positive
 - Species must exist
@@ -70,6 +75,7 @@ Split dashboard into:
 - Size range (by weight or length)
 
 #### Charts (Optional but valuable)
+
 - Fish caught per month
 - Species distribution (pie/bar)
 - Location comparison
@@ -83,6 +89,7 @@ Split dashboard into:
 - ORM: Prisma (strongly recommended)
 
 This gives:
+
 - Structure
 - Migrations
 - Type safety if using TypeScript later
@@ -104,6 +111,7 @@ This gives:
   index.html
 
 Keep:
+
 - Routes thin
 - Logic inside services
 - Validation centralized
@@ -119,6 +127,7 @@ Keep:
 ### Performance
 
 Add indexes on:
+
 - session.date
 - session.location
 - catch.species_id
@@ -128,6 +137,7 @@ Even with SQLite, this matters later.
 ### Export & Backup
 
 Very valuable feature:
+
 - Export data to CSV
 - Export full backup as JSON
 - Import data
@@ -136,17 +146,20 @@ Very valuable feature:
 ### Weather Integration
 
 Store:
+
 - Weather conditions
 - Temperature
 - Wind
 
 Later you can correlate:
+
 - Fish caught vs weather
 - Most productive conditions
 
 ### Geolocation Upgrade
 
 Instead of free-text location:
+
 - Use saved locations table
 - Allow GPS coordinates
 - Later integrate with map (Leaflet.js)
@@ -154,6 +167,7 @@ Instead of free-text location:
 ### Personal Best Tracking
 
 Automatically compute:
+
 - Personal best per species
 - Average weight per species
 - Top 5 largest fish ever
@@ -164,6 +178,7 @@ These are powerful motivation metrics.
 Keep version 1 very small.
 
 ### MVP should include:
+
 - Create/edit/delete sessions
 - Add catches to session
 - Predefined species list
@@ -224,6 +239,7 @@ Avoid putting heavy calculations in frontend initially.
 ## 10. Smart Improvements for Real-World Use
 
 These are high-value additions:
+
 - “Quick Add Catch” button
 - Auto-fill last used bait
 - Session duration tracking
@@ -235,6 +251,7 @@ These are high-value additions:
 ## 11. Long-Term Scalability Path
 
 If the project grows:
+
 - Move SQLite → PostgreSQL
 - Add authentication (JWT or session-based)
 - Convert to TypeScript
