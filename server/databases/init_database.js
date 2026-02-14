@@ -7,14 +7,6 @@ const run = promisify(db.run.bind(db));
    TABLE DEFINITIONS
 ========================= */
 
-const CREATE_USERS_TABLE = `
-CREATE TABLE IF NOT EXISTS users (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name TEXT NOT NULL,
-  created_at TEXT DEFAULT CURRENT_TIMESTAMP
-);
-`;
-
 const CREATE_SESSIONS_TABLE = `
 CREATE TABLE IF NOT EXISTS sessions (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -72,7 +64,6 @@ ON sessions(date);
 
 async function initializeDatabase() {
   try {
-    await run(CREATE_USERS_TABLE);
     await run(CREATE_SESSIONS_TABLE);
     await run(CREATE_SPECIES_TABLE);
     await run(CREATE_CATCHES_TABLE);
