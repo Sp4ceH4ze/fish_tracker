@@ -6,7 +6,7 @@ roadmap.md
 design_doc.md
 .prettierrc
 eslint.config.mjs
-databases/database.db
+server/databases/database.db
 
 ### dotenv ###
 .env
