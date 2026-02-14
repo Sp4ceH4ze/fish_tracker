@@ -2,7 +2,7 @@
   "name": "fish_tracker",
   "version": "1.0.0",
   "description": "Web application for keeping track of fishing session results.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,5 +17,13 @@
     "prisma": "^7.4.0",
     "sqlite3": "^5.1.7",
     "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "globals": "^17.3.0",
+    "prettier": "^3.8.1"
   }
 }
